@@ -86,5 +86,5 @@ C:\Users\lanza\source\repos\ExecStatusApp\obj\Debug\ExecStatusApp.csprojAssembly
 C:\Users\lanza\source\repos\ExecStatusApp\obj\Debug\ExecStatusApp.csproj.CopyComplete
 C:\Users\lanza\source\repos\ExecStatusApp\obj\Debug\ExecStatusApp.dll
 C:\Users\lanza\source\repos\ExecStatusApp\obj\Debug\ExecStatusApp.pdb
-C:\Users\lanza\source\repos\ExecStatusApp\obj\Debug\ExecStatusApp.Migrations.Initial.resources
-C:\Users\lanza\source\repos\ExecStatusApp\obj\Debug\ExecStatusApp.csproj.GenerateResource.cache
+C:\Users\lanza\source\repos\execStatusApp\obj\Debug\ExecStatusApp.Migrations.Initial.resources
+C:\Users\lanza\source\repos\execStatusApp\obj\Debug\ExecStatusApp.csproj.GenerateResource.cache

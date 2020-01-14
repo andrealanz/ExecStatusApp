@@ -11,7 +11,7 @@ namespace ExecStatusApp.Migrations
                 "dbo.ExecStats",
                 c => new
                     {
-                        Id = c.DateTime(nullable: false),
+                        Id = c.String(nullable: false, maxLength: 128),
                         SourceMachine = c.String(nullable: false),
                         AppName = c.String(),
                         Task = c.String(),

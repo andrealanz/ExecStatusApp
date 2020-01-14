@@ -28,7 +28,7 @@ namespace ExecStatusApp.Controllers
         [ResponseType(typeof(ExecStats))]
         public async Task<IHttpActionResult> GetExecStats(string id)
         {
-            ExecStats execStats = await db.ExecStats.FindAsync(Convert.ToDateTime(id));
+            ExecStats execStats = await db.ExecStats.FindAsync(id);
             if (execStats == null)
             {
                 return NotFound();
@@ -46,7 +46,7 @@ namespace ExecStatusApp.Controllers
                 return BadRequest(ModelState);
             }
 
-            if (Convert.ToDateTime(id) != execStats.Id)
+            if (id != execStats.Id)
             {
                 return BadRequest();
             }
@@ -59,7 +59,7 @@ namespace ExecStatusApp.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!ExecStatsExists(Convert.ToDateTime(id)))
+                if (!ExecStatsExists(id))
                 {
                     return NotFound();
                 }
@@ -106,7 +106,7 @@ namespace ExecStatusApp.Controllers
         [ResponseType(typeof(ExecStats))]
         public async Task<IHttpActionResult> DeleteExecStats(string id)
         {
-            ExecStats execStats = await db.ExecStats.FindAsync(Convert.ToDateTime(id));
+            ExecStats execStats = await db.ExecStats.FindAsync(id);
             if (execStats == null)
             {
                 return NotFound();
@@ -127,7 +127,7 @@ namespace ExecStatusApp.Controllers
             base.Dispose(disposing);
         }
 
-        private bool ExecStatsExists(DateTime id)
+        private bool ExecStatsExists(string id)
         {
             return db.ExecStats.Count(e => e.Id == id) > 0;
         }
