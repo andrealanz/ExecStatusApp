@@ -8,8 +8,10 @@ namespace ExecStatusApp.Models
 {
     public class ExecStats
     {
-        public string Id { get; set; }
         [Required]
+        public string Id { get; set; }
+     
+        public DateTime Time { get; set; }
         public string SourceMachine { get; set; }
         public string AppName { get; set; }
         public string Task { get; set; }
@@ -17,5 +19,15 @@ namespace ExecStatusApp.Models
         public int prop1 { get; set; }
         public int prop2 { get; set; }
         public int prop3 { get; set; }
+
+        public void getUTC()
+        {
+            //convert epoch to UTC
+            DateTime newTime = new DateTime(1970, 1, 1, 0, 0, 0, 0);
+            //add epoch seconds
+            newTime = newTime.AddSeconds(Int64.Parse(this.Id));
+            //convert to UTC
+            this.Time = newTime.ToUniversalTime();
+        }
     }
 }
