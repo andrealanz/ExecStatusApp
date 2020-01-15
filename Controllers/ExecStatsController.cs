@@ -51,6 +51,7 @@ namespace ExecStatusApp.Controllers
                 return BadRequest();
             }
 
+            execStats.getUTC();     //get UTC time entry
             db.Entry(execStats).State = EntityState.Modified;
 
             try
@@ -81,6 +82,7 @@ namespace ExecStatusApp.Controllers
                 return BadRequest(ModelState);
             }
 
+            execStats.getUTC();     //get UTC time entry
             db.ExecStats.Add(execStats);
 
             try

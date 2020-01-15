@@ -13,7 +13,7 @@ namespace ExecStatusApp.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "202001132350060_Initial"; }
+            get { return "202001152120397_Initial"; }
         }
         
         string IMigrationMetadata.Source

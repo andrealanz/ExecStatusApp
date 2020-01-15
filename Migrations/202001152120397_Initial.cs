@@ -12,7 +12,8 @@ namespace ExecStatusApp.Migrations
                 c => new
                     {
                         Id = c.String(nullable: false, maxLength: 128),
-                        SourceMachine = c.String(nullable: false),
+                        Time = c.DateTime(nullable: false),
+                        SourceMachine = c.String(),
                         AppName = c.String(),
                         Task = c.String(),
                         Status = c.Int(nullable: false),
